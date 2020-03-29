@@ -73,6 +73,6 @@ class Application(tk.Tk):
     def cmd_view_file(self):
         if self.resultFileName.get():
             if sys.platform == 'win32':
-                subprocess.Popen('explorer"{}"'.format(p.dirname(self.resultFileName)))
+                subprocess.Popen('explorer "{}"'.format(p.dirname(self.resultFileName.get())))
             else:
                 subprocess.call(["open", p.dirname(self.resultFileName.get())])
