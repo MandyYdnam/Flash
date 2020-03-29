@@ -39,6 +39,7 @@ class Application(tk.Tk):
 
     def callback_choose_file(self):
         self.sourcefileName.set(filedialog.askopenfilename())
+        self.resultFileName.set('')
 
     def cmd_parse_file(self):
         data_dic = {}
