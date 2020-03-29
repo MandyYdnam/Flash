@@ -7,7 +7,7 @@ import datetime
 import os.path as p
 import os
 import subprocess
-
+import sys
 
 class Application(tk.Tk):
     def __init__(self, *args, **kwargs):
@@ -72,4 +72,7 @@ class Application(tk.Tk):
 
     def cmd_view_file(self):
         if self.resultFileName.get():
-            subprocess.call(["open", p.dirname(self.resultFileName.get())])
+            if sys.platform == 'win32':
+                subprocess.Popen('explorer"{}"'.format(p.dirname(self.resultFileName)))
+            else:
+                subprocess.call(["open", p.dirname(self.resultFileName.get())])
