@@ -77,3 +77,5 @@ class Application(tk.Tk):
                 subprocess.Popen('explorer "{}"'.format(p.dirname(self.resultFileName.get())))
             else:
                 subprocess.call(["open", p.dirname(self.resultFileName.get())])
+        else:
+            messagebox.showerror('Result Not Found!', 'Please Click Get Unique Logs.')
