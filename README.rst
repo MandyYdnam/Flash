@@ -22,8 +22,6 @@ pip_
 
     pip install flash_parser
 
-.. image:: https://github.com/MandyYdnam/Flash/blob/master/Statistics.gif
-
 
 .. _pip: http://pip-installer.org
 .. _Python: https://python.org
